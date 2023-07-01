@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <><div>
             <h1>Las Vegas for Locals</h1>
-        </div><div className='body'>
+        </div><div className='index-body'>
 
             </div></>
     );
