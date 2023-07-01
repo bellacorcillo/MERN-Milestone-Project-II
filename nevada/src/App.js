@@ -9,7 +9,6 @@ import Historical from './pages/historical';
 import Shopping from './pages/shopping';
 import Nightlife from './pages/nightlife';
 
-
 function App() {
     return (
         <Router>
