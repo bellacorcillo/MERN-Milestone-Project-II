@@ -7,7 +7,7 @@ const Food = () => {
             <h1>
                 Eat Like a Local
             </h1>
-        </div><div className="body">
+        </div><div className="food-body">
 
             </div></>
     );
