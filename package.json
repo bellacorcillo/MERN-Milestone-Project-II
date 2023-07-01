@@ -6,7 +6,11 @@
     "pg": "^8.11.1",
     "pg-hstore": "^2.3.4",
     "react-icons": "^4.10.1",
+<<<<<<< HEAD
     "react-router-dom": "^6.14.0",
+=======
+    "react-router-dom": "^6.14.1",
+>>>>>>> 5f933c41f072d48210dd231488d385f0f09cf991
     "sequelize": "^6.32.1",
     "styled-components": "^6.0.1"
   }

@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import { BrowserRouter as Router, Routes, Route }
-    from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages';
 import Food from './pages/food';
 import Adventure from './pages/adventure';
@@ -10,13 +9,13 @@ import Historical from './pages/historical';
 import Shopping from './pages/shopping';
 import Nightlife from './pages/nightlife';
 
- 
+
 function App() {
     return (
         <Router>
             <Navbar />
             <Routes>
-                <Route exact path='/' element={<Home />} />
+                <Route exact path='/' exact element={<Home />} />
                 <Route path='/food' element={<Food />} />
                 <Route path='/adventure' element={<Adventure />} />
                 <Route path='/shopping' element={<Shopping />} />
@@ -26,5 +25,5 @@ function App() {
         </Router>
     );
 }
- 
+
 export default App;
