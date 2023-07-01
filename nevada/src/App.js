@@ -11,17 +11,20 @@ import Nightlife from './pages/nightlife';
 
 function App() {
     return (
-        <Router>
-            <Navbar />
-            <Routes>
-                <Route exact path='/' element={<Home />} />
-                <Route path='/food' element={<Food />} />
-                <Route path='/adventure' element={<Adventure />} />
-                <Route path='/shopping' element={<Shopping />} />
-                <Route path='/historical' element={<Historical />} />
-                <Route path='/nightlife' element={<Nightlife />} />
-            </Routes>
-        </Router>
+        <div className="App">
+            <Router>
+                <Navbar />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/food" element={<Food />} />
+                    <Route path="/adventure" element={<Adventure />} />
+                    <Route path="/shopping" element={<Shopping />} />
+                    <Route path="/historical" element={<Historical />} />
+                    <Route path="/nightlife" element={<Nightlife />} />
+                </Routes>
+            </Router>
+            <h1 className="App-header"></h1>
+        </div>
     );
 }
 

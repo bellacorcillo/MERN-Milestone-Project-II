@@ -1,13 +1,15 @@
 import React from "react";
+import "./food.css"
  
 const Food = () => {
     return (
-        <div>
+        <><div>
             <h1>
-                GeeksforGeeks is a Computer
-                Science portal for geeks.
+                Eat Like a Local
             </h1>
-        </div>
+        </div><div className="food-body">
+
+            </div></>
     );
 };
  
