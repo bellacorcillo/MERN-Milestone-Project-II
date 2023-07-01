@@ -4,7 +4,7 @@ import "./index.css"
 const Home = () => {
     return (
         <><div>
-            <h1>Las Vegas for Locals</h1>
+            <h1>Las Vegas for Localss</h1>
         </div><div className='index-body'>
 
             </div></>
