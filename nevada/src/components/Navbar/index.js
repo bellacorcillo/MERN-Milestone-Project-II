@@ -1,28 +1,27 @@
 import React from "react";
-import { Nav, NavLink, NavMenu }
-    from "./NavbarElements";
+import { Nav, NavLink, NavMenu } from "./NavbarElements";
  
 const Navbar = () => {
     return (
         <>
             <Nav>
                 <NavMenu>
-                <NavLink to="/" activeStyle>
+                    <NavLink to="/" activeStyle>
                         Home
                     </NavLink>
-                    <NavLink to="/Food" activeStyle>
+                    <NavLink to="/food" activeStyle>
                         Food
                     </NavLink>
-                    <NavLink to="/Adventure" activeStyle>
+                    <NavLink to="/adventure" activeStyle>
                         Adventure
                     </NavLink>
-                    <NavLink to="/Shopping" activeStyle>
+                    <NavLink to="/shopping" activeStyle>
                         Shopping
                     </NavLink>
-                    <NavLink to="/Historical" activeStyle>
+                    <NavLink to="/historical" activeStyle>
                         Historical
                     </NavLink>
-                    <NavLink to="/Nightlife" activeStyle>
+                    <NavLink to="/nightlife" activeStyle>
                         Nightlife
                     </NavLink>
                 </NavMenu>
