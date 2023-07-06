@@ -3,13 +3,16 @@ import "./food.css"
  
 const Food = () => {
     return (
-        <><div>
+        <>
+        <div>
             <h1>
                 Eat Like a Locals
             </h1>
-        </div><div className="food-body">
+        </div>
+        <div className="food-body">
 
-            </div></>
+        </div>
+        </>
     );
 };
  
