@@ -3,11 +3,17 @@ import "./index.css"
  
 const Home = () => {
     return (
-        <><div>
+        <>
+        <div>
             <h1>Las Vegas for Locals</h1>
-        </div><div className='food'>
+        </div>
+        <div className='index-body'>
 
-            </div></>
+        </div>
+        <div>
+            
+        </div>
+        </>
     );
 };
  
