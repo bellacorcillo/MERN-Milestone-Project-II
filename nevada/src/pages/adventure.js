@@ -10,5 +10,7 @@ const Adventure = () => {
         </div>
     );
 };
+
+
  
 export default Adventure;
