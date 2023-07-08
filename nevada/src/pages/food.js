@@ -10,8 +10,8 @@ const Food = () => {
             </h1>
         </div>
         <div className="food-body">
-
         </div>
+        
         </>
     );
 };
