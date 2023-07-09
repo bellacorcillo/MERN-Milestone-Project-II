@@ -1,13 +1,13 @@
+const path = require('path');
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
 const app = express();
-const port = 3003;
+const port = process.env.PORT || 3003;
 
 // Enable CORS
 app.use(cors());
-app.use(express.json());
 
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost/reviews', {
@@ -20,12 +20,20 @@ connection.once('open', () => {
   console.log('Connected to MongoDB database');
 });
 
+// Parse JSON bodies
+app.use(express.json());
+
 // Routes
+const exampleRouter = require('./routes/example');
 const foodRoutes = require('./routes/foodRoutes');
-app.use('/api/food', foodRoutes);
+const reviewRoutes = require('./routes/reviewRoutes');
+
+app.use('/api/example', exampleRouter);
+app.use('/api/foods', foodRoutes);
+app.use('/api/reviews', reviewRoutes);
 
 // Serve static files
-app.use(express.static('nevada/build'));
+app.use(express.static(path.join(__dirname, 'nevada', 'build')));
 
 // Catch-all route for handling React routing
 app.get('*', (req, res) => {

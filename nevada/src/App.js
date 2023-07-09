@@ -13,6 +13,9 @@ import NightlifePage from './components/NightlifePage';
 const App = () => {
   const [examples, setExamples] = useState([]);
   const [text, setText] = useState('');
+  const [restaurant, setRestaurant] = useState('');
+  const [rating, setRating] = useState('');
+  const [comment, setComment] = useState('');
 
   useEffect(() => {
     fetchExamples();
@@ -37,6 +40,19 @@ const App = () => {
     }
   };
 
+  const submitReview = async () => {
+    try {
+      await axios.post('/api/reviews/submit', { restaurant, rating, comment });
+      // Optionally, you can perform any necessary actions after a successful review submission
+      // For example, clear the form fields or fetch updated reviews
+      setRestaurant('');
+      setRating('');
+      setComment('');
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
   return (
     <Router>
       <NavigationBar />
@@ -54,6 +70,3 @@ const App = () => {
 };
 
 export default App;
-
-
-
