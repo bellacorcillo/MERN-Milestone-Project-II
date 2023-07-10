@@ -9,7 +9,7 @@ import AdventurePage from './components/AdventurePage';
 import ShoppingPage from './components/ShoppingPage';
 import HistoricalPage from './components/HistoricalPage';
 import NightlifePage from './components/NightlifePage';
-
+axios.defaults.baseURL = "http://localhost:3003"
 const App = () => {
   const [examples, setExamples] = useState([]);
   const [text, setText] = useState('');
