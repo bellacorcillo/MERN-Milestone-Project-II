@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import axios from 'axios';
 import './FoodPage.css';
 
@@ -9,11 +9,12 @@ const FoodPage = () => {
     rating: '',
     comment: '',
   });
+  useEffect(()=>{ fetchReviews()},[])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('/api/food/reviews', newReview);
+      await axios.post('/api/reviews/submit', newReview);
       fetchReviews();
       setNewReview({
         restaurant: '',
@@ -27,8 +28,8 @@ const FoodPage = () => {
 
   const fetchReviews = async () => {
     try {
-      const response = await axios.get('/api/food/reviews');
-      setReviews(response.data);
+      const response = await axios.get('/api/reviews');
+      setReviews(response.data.reviews);
     } catch (error) {
       console.error('Error:', error);
     }
